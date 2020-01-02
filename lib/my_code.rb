@@ -5,15 +5,13 @@ def map(source_array)
   while i < source_array.length do
     
   
-  new_array.push((source_array[i] * -1))
+  new_array.push(yield(source_array[i] * -1))
   i += 1 
   
  end
- base = "#{new_array}"
- 
-  new_array
+ new_array
 
 
-
+end
 
  map([1,2,3,4])
